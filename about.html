@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT US</title>
+    <link rel="stylesheet" href="about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Klee+One:wght@600&family=Playfair+Display:wght@500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="sticky">
+        <a href="index.html" class="logo">FALCON</a>
+        <div class="footer toggle" id="menu"><i class="fas fa-bars"></i></div>
+        <div class="footer " id="cancle"><i class="fas fa-times"></i></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="#main" id="G1">FALCON</a></li>
+                <li><a href="#logos" id="A1">LOGO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h2> <a href="about.html" id="main">FALCON</a></h2>
+            <p class="info">
+                Falcon is a website creater. It is create gaming websites,E-commerce websites, <br>
+
+                blog websites,informative
+                websites and many more websites you want.
+            </p>
+            <p class="info">
+                Falcon has ability to create websites which you like most.
+                <br> Falcon is established in 2021. hope you are enjoying our gaming website.
+            </p>
+        </div>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="logos">
+            <h2 class="LOGO" id="logos">LOGO</h2>
+            <div class="box1">
+                <img src="logo.png" id="eagle">
+                <img src="trademark.png" alt="" id="tra">
+            </div>
+            <h2 class="LOGO">CREATOR</h2>
+            <a href="https://www.instagram.com/__preet._.87/">
+                <div class="box3" id="first">
+                    <img src="creator.png" alt="" class="img">
+                    <div class="know">
+                        <div>PREET SHAH</div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <div class="container1">
+            <div class="box2">
+                <h2> <a href="index.html" id="bottom"> FALCON</a></h2>
+            </div>
+            <div class="box2">
+                <h2>Explore</h2>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#main" id="G1">FALCON</a></li>
+                    <li><a href="#logos" id="A1">LOGO</a></li>
+
+                </ul>
+            </div>
+            <div class="box2">
+                <h2>You can visit our other sites</h2>
+                <ul>
+                    <li><a href="https://dmartshopping.000webhostapp.com/">DMART Store</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>Copyright <i class="far fa-copyright"></i> 2021 FALCON | All copyrights reserved</p>
+        </div>
+    </footer>
+</body>
+<script>
+    const navigation = document.querySelector('nav');
+    const cancle = document.querySelector('#cancle');
+    const menu = document.querySelector('#menu');
+    menu.onclick = function () {
+        // this.classList.toggle('active');
+        navigation.classList.toggle('active');
+        cancle.classList.add('toggle');
+        cancle.classList.add('active');
+        this.classList.remove('toggle');
+        this.classList.remove('active');
+
+
+    }
+    cancle.onclick = function () {
+        navigation.classList.toggle('active');
+        cancle.classList.remove('toggle');
+        cancle.classList.remove('active');
+        menu.classList.add('toggle');
+        menu.classList.add('active');
+    }
+    document.querySelector('#G1').onclick = function () {
+        this.classList.toggle('active');
+        navigation.classList.toggle('active');
+        cancle.classList.remove('toggle');
+        cancle.classList.remove('active');
+        menu.classList.add('toggle');
+        menu.classList.add('active');
+
+    }
+    document.querySelector('#A1').onclick = function () {
+        this.classList.toggle('active');
+        navigation.classList.toggle('active');
+        cancle.classList.remove('toggle');
+        cancle.classList.remove('active');
+        menu.classList.add('toggle');
+        menu.classList.add('active');
+    }
+</script>
+
+</html>

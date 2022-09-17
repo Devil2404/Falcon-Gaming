@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FALCON</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <a href="index.html" class="logo">FALCON</a>
+        <div class="footer toggle" id="menu"><i class="fas fa-bars"></i></div>
+        <div class="footer " id="cancle"><i class="fas fa-times"></i></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#games" id="G1">Games</a></li>
+                <li><a href="#bottom" id="A1">About Us</a></li>
+            </ul>
+        </nav>
+        <p class="headfooter">Copyright <i class="far fa-copyright"></i> 2021 FALCON | All copyrights reserved | This
+            Website is created by DEVIL(PREET
+            SHAH)</p>
+    </header>
+    <main>
+        <h2 id="games">Games</h2>
+        <ul>
+            <li><a href="flip.html">FLIP</a></li>
+            <li><a href="stack.html">STACK</a></li>
+            <li><a href="menja.html">NINJA</a></li>
+            <li><a href="snake.html" id="snake">SNAKE</a></li>
+            <li><a href="coloron.html">COLORON</a></li>
+        </ul>
+        <div class="ex">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="box">
+                <h2> <a href="index.html" id="bottom"> FALCON</a></h2>
+                <p>We create best gaming website for you</p>
+                <p> And we also create E-commerce website</p>
+            </div>
+            <div class="box">
+                <h2>Explore</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#games">Games</a></li>
+                    <li><a href="#bottom">About Us</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2>You can visit our other sites</h2>
+                <ul>
+                    <li><a href="https://dmartshopping.000webhostapp.com/">DMART Store</a></li>
+                </ul>
+            </div>
+            <div class="box">
+                <h2><a href="about.html">About Me</a></h2>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>Copyright <i class="far fa-copyright"></i> 2021 FALCON | All copyrights reserved</p>
+        </div>
+    </footer>
+</body>
+<script>
+    window.addEventListener("scroll", function () {
+        const header = document.querySelector('header');
+        header.classList.toggle("sticky", window.scrollY > 0);
+        let x = header.classList.contains("sticky");
+        let y = window.innerWidth;
+        // console.log(y);
+        const bgremove = document.querySelector('.ex');
+        const photoremove = document.querySelector('.LM');
+        const snake = document.querySelector("#snake");
+        const logoremove = document.querySelector('.LM1');
+
+        if (x) {
+            bgremove.classList.add("box");
+            bgremove.classList.remove("blank");
+        }
+        else {
+            bgremove.classList.remove("box");
+            bgremove.classList.add("blank");
+        }
+        if (y < 991) {
+            snake.classList.add("block");
+        }
+        else {
+            snake.classList.remove("block");
+        }
+    });
+    window.addEventListener("scroll", function () {
+        const footer = document.querySelector('.headfooter');
+        footer.classList.toggle("footer", window.scrollY > 0)
+    });
+    const navigation = document.querySelector('nav');
+    const cancle = document.querySelector('#cancle');
+    const menu = document.querySelector('#menu');
+    menu.onclick = function () {
+        // this.classList.toggle('active');
+        navigation.classList.toggle('active');
+        cancle.classList.add('toggle');
+        cancle.classList.add('active');
+        this.classList.remove('toggle');
+        this.classList.remove('active');
+
+
+    }
+    cancle.onclick=function(){
+        navigation.classList.toggle('active');
+       cancle.classList.remove('toggle');
+       cancle.classList.remove('active');
+       menu.classList.add('toggle');
+       menu.classList.add('active');
+    }
+    document.querySelector('#G1').onclick = function () {
+        this.classList.toggle('active');
+        navigation.classList.toggle('active');
+        cancle.classList.remove('toggle');
+       cancle.classList.remove('active');
+       menu.classList.add('toggle');
+       menu.classList.add('active');
+        
+    }
+    document.querySelector('#A1').onclick = function () {
+        this.classList.toggle('active');
+        navigation.classList.toggle('active');
+        cancle.classList.remove('toggle');
+       cancle.classList.remove('active');
+       menu.classList.add('toggle');
+       menu.classList.add('active');
+    }
+
+
+</script>
+
+</html>
